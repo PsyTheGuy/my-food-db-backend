@@ -16,7 +16,7 @@ server.use(morgan('tiny'));
 
 server.use(
   cors({
-    origin: 'http://localhost:3000',
+    origin: 'https://my-food-db-frontend.vercel.app/',
   }),
 );
 
