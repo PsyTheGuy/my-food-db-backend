@@ -14,11 +14,7 @@ const server = express();
 server.use(express.json());
 server.use(morgan('tiny'));
 
-server.use(
-  cors({
-    origin: 'https://my-food-db-frontend.vercel.app/',
-  }),
-);
+server.use(cors());
 
 server.use('/api/v1/food', tokenValidation, foodRouter);
 server.use('/login', loginRouter);
